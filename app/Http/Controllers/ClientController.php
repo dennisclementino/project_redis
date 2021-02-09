@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redis;
 
 class ClientController extends Controller
 {
@@ -14,10 +15,10 @@ class ClientController extends Controller
     public function index()
     {
         //
-        dd('teste');
+
         session()->put('foo', 'bar');
 
-        dd('teste');
+        dd('before session');
 
     }
 
